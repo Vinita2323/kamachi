@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white border-t border-primary/20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding px-margin-mobile md:px-section-padding max-w-container-max mx-auto">
-        <div className="md:col-span-1">
-          <img src="/Logo (7).png" alt="Kamachi TMT" className="h-12 md:h-14 w-auto mb-4 md:mb-6 bg-white rounded p-1" />
-          <p className="text-white/80 font-body-md pr-4 mb-4 md:mb-0">Leading the steel industry through innovative manufacturing and sustainable growth since 1980.</p>
+        <div className="md:col-span-1 text-center md:pr-8 lg:pr-12">
+          <img src="/Logo (7).png" alt="Kamachi TMT" className="h-14 md:h-16 w-auto mb-4 md:mb-6 bg-white rounded-lg p-2 mx-auto" />
+          <p className="text-white/80 font-body-md px-4 mb-4 md:mb-0">Leading the steel industry through innovative manufacturing and sustainable growth since 1980.</p>
         </div>
         <div>
-          <h4 className="font-label-caps text-label-caps text-white mb-6">Quick Links</h4>
+          <h4 className="text-xl font-medium text-white mb-6">Quick Links</h4>
           <ul className="space-y-4">
             <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Sustainability Report</a></li>
             <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Global Locations</a></li>
@@ -17,14 +17,14 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4 className="font-label-caps text-label-caps text-white mb-6">Legal</h4>
+          <h4 className="text-xl font-medium text-white mb-6">Legal</h4>
           <ul className="space-y-4">
             <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Privacy Policy</a></li>
             <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Terms of Service</a></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-label-caps text-label-caps text-white mb-6">Contact</h4>
+          <h4 className="text-xl font-medium text-white mb-6">Contact</h4>
           <p className="text-white/80 mb-4">Kamachi Towers, Industrial Area,<br />Chennai, TN - 600001</p>
           <div className="flex gap-4">
             <a className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary text-white transition-all" href="#">

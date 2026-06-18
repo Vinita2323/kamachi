@@ -113,11 +113,6 @@ const Home = () => {
               <div className="flex gap-6 pr-6">
                 {convinceCards.map((card, idx) => (
                   <div key={idx} className={`w-[280px] sm:w-[320px] shrink-0 bg-white ${card.borderClass} shadow-lg rounded-xl hover:-translate-y-1 transition-all relative group h-64 flex flex-col overflow-hidden`}>
-                    <div className="absolute top-0 right-0 overflow-hidden w-20 h-20 z-20 pointer-events-none">
-                      <div className="absolute top-4 -right-6 bg-gradient-to-r from-red-600 to-red-800 text-white text-[9px] font-bold w-28 h-6 flex items-center justify-center transform rotate-45 shadow-md border-y border-white/20 tracking-wider">
-                        CONVINCE ME
-                      </div>
-                    </div>
                     <div className="flex-1 w-full relative z-0 overflow-hidden">
                       <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                     </div>
@@ -130,11 +125,6 @@ const Home = () => {
               <div className="flex gap-6 pr-6">
                 {convinceCards.map((card, idx) => (
                   <div key={'dup-'+idx} className={`w-[280px] sm:w-[320px] shrink-0 bg-white ${card.borderClass} shadow-lg rounded-xl hover:-translate-y-1 transition-all relative group h-64 flex flex-col overflow-hidden`}>
-                    <div className="absolute top-0 right-0 overflow-hidden w-20 h-20 z-20 pointer-events-none">
-                      <div className="absolute top-4 -right-6 bg-gradient-to-r from-red-600 to-red-800 text-white text-[9px] font-bold w-28 h-6 flex items-center justify-center transform rotate-45 shadow-md border-y border-white/20 tracking-wider">
-                        CONVINCE ME
-                      </div>
-                    </div>
                     <div className="flex-1 w-full relative z-0 overflow-hidden">
                       <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                     </div>

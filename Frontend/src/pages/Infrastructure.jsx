@@ -19,10 +19,10 @@ const Infrastructure = () => {
       <main className="pt-20">
         
         {/* Hero Section */}
-        <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-primary">
+        <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-primary/80">
           <div className="absolute inset-0 w-full h-full">
-            <img src={InfraHeroImg} alt="State-of-the-Art Infrastructure" className="w-full h-full object-cover opacity-60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+            <img src={InfraHeroImg} alt="State-of-the-Art Infrastructure" className="w-full h-full object-cover opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/30 to-transparent"></div>
           </div>
           <div className="relative z-10 text-center px-margin-mobile md:px-section-padding max-w-container-max mx-auto text-white">
             <span className="font-label-caps text-label-caps tracking-widest uppercase mb-4 block text-secondary">World-Class Facilities</span>

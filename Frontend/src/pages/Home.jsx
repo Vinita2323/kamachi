@@ -67,8 +67,8 @@ const Home = () => {
           <div className="absolute bottom-0 left-0 w-full bg-surface-container-lowest border-t border-outline-variant py-12">
             <div className="max-w-container-max mx-auto px-margin-mobile md:px-section-padding grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border border-primary flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-3xl text-primary">toll</span>
+                <div className="w-[72px] h-[72px] rounded-full border-2 border-primary flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-3xl text-secondary">toll</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="font-headline-md text-xl md:text-2xl font-bold text-primary">15.6 MTPA</span>
@@ -76,8 +76,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border border-primary flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-3xl text-primary">factory</span>
+                <div className="w-[72px] h-[72px] rounded-full border-2 border-primary flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-3xl text-secondary">factory</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="font-headline-md text-xl md:text-2xl font-bold text-primary">2,684 MW</span>
@@ -85,8 +85,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border border-primary flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-3xl text-primary">groups</span>
+                <div className="w-[72px] h-[72px] rounded-full border-2 border-primary flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-3xl text-secondary">groups</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="font-headline-md text-xl md:text-2xl font-bold text-primary">50,000 +</span>
@@ -94,8 +94,8 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-full border border-primary flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-3xl text-primary">volunteer_activism</span>
+                <div className="w-[72px] h-[72px] rounded-full border-2 border-primary flex items-center justify-center shrink-0">
+                  <span className="material-symbols-outlined text-3xl text-secondary">volunteer_activism</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="font-headline-md text-xl md:text-2xl font-bold text-primary">14 + Million</span>
@@ -139,17 +139,17 @@ const Home = () => {
         </section>
 
         {/* Steel Making Process */}
-        <section className="py-16 bg-surface-container-low border-y border-outline-variant relative overflow-hidden">
+        <section className="py-12 bg-surface-container-low border-y border-outline-variant relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10" ref={el => sectionsRef.current[2] = el}>
-            <div className="text-center mb-16">
-              <span className="inline-block text-red-600 font-label-caps text-label-caps mb-2 tracking-widest font-bold">OUR EXPERTISE</span>
+            <div className="text-center mb-10">
+              <span className="inline-block text-red-600 font-label-caps text-label-caps mb-1 tracking-widest font-bold">OUR EXPERTISE</span>
               <h2 className="font-headline-lg text-3xl md:text-5xl text-primary font-bold">The Steel Making Process</h2>
-              <p className="text-on-surface-variant mt-4 max-w-2xl mx-auto">From raw materials to the finest TMT bars, every step is strictly monitored for uncompromising quality.</p>
+              <p className="text-on-surface-variant mt-2 max-w-2xl mx-auto">From raw materials to the finest TMT bars, every step is strictly monitored for uncompromising quality.</p>
             </div>
             
-            <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+            <div className="flex flex-col lg:flex-row gap-8 items-stretch">
               {/* Left Side: Video */}
-              <div className="w-full lg:w-5/12 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative min-h-[400px] lg:min-h-full">
+              <div className="w-full lg:w-5/12 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative min-h-[350px] lg:min-h-full">
                 <video 
                   src={steelMakingVideo} 
                   autoPlay 
@@ -162,71 +162,71 @@ const Home = () => {
               </div>
 
               {/* Right Side: Content */}
-              <div className="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {/* Step 1 */}
-                <div className="bg-white p-5 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <span className="material-symbols-outlined text-2xl text-primary group-hover:text-white transition-colors">precision_manufacturing</span>
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <span className="material-symbols-outlined text-xl text-primary group-hover:text-white transition-colors">precision_manufacturing</span>
                     </div>
-                    <h3 className="text-lg font-bold text-primary">1. Raw Material</h3>
+                    <h3 className="text-base font-bold text-primary">1. Raw Material</h3>
                   </div>
-                  <p className="text-on-surface-variant text-sm">We select only the highest grade iron ore and scrap to ensure impeccable chemistry.</p>
+                  <p className="text-on-surface-variant text-sm leading-snug">We select only the highest grade iron ore and scrap to ensure impeccable chemistry.</p>
                 </div>
                 
                 {/* Step 2 */}
-                <div className="bg-white p-5 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <span className="material-symbols-outlined text-2xl text-primary group-hover:text-white transition-colors">local_fire_department</span>
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <span className="material-symbols-outlined text-xl text-primary group-hover:text-white transition-colors">local_fire_department</span>
                     </div>
-                    <h3 className="text-lg font-bold text-primary">2. Melting & Refining</h3>
+                    <h3 className="text-base font-bold text-primary">2. Melting & Refining</h3>
                   </div>
-                  <p className="text-on-surface-variant text-sm">Materials are melted in advanced induction furnaces, followed by strict ladle refining.</p>
+                  <p className="text-on-surface-variant text-sm leading-snug">Materials are melted in advanced induction furnaces, followed by strict ladle refining.</p>
                 </div>
 
                 {/* Step 3 */}
-                <div className="bg-white p-5 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <span className="material-symbols-outlined text-2xl text-primary group-hover:text-white transition-colors">view_stream</span>
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <span className="material-symbols-outlined text-xl text-primary group-hover:text-white transition-colors">view_stream</span>
                     </div>
-                    <h3 className="text-lg font-bold text-primary">3. Continuous Casting</h3>
+                    <h3 className="text-base font-bold text-primary">3. Continuous Casting</h3>
                   </div>
-                  <p className="text-on-surface-variant text-sm">The pure molten steel is continuously cast into high-quality uniform billets.</p>
+                  <p className="text-on-surface-variant text-sm leading-snug">The pure molten steel is continuously cast into high-quality uniform billets.</p>
                 </div>
 
                 {/* Step 4 */}
-                <div className="bg-white p-5 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <span className="material-symbols-outlined text-2xl text-primary group-hover:text-white transition-colors">settings</span>
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <span className="material-symbols-outlined text-xl text-primary group-hover:text-white transition-colors">settings</span>
                     </div>
-                    <h3 className="text-lg font-bold text-primary">4. Hot Rolling</h3>
+                    <h3 className="text-base font-bold text-primary">4. Hot Rolling</h3>
                   </div>
-                  <p className="text-on-surface-variant text-sm">Billets are reheated and passed through automated mills for precise dimensions.</p>
+                  <p className="text-on-surface-variant text-sm leading-snug">Billets are reheated and passed through automated mills for precise dimensions.</p>
                 </div>
 
                 {/* Step 5 */}
-                <div className="bg-white p-5 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <span className="material-symbols-outlined text-2xl text-primary group-hover:text-white transition-colors">ac_unit</span>
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <span className="material-symbols-outlined text-xl text-primary group-hover:text-white transition-colors">ac_unit</span>
                     </div>
-                    <h3 className="text-lg font-bold text-primary">5. Thermex Quenching</h3>
+                    <h3 className="text-base font-bold text-primary">5. Thermex Quenching</h3>
                   </div>
-                  <p className="text-on-surface-variant text-sm">Rapid water quenching creates a tough outer layer while keeping the core ductile.</p>
+                  <p className="text-on-surface-variant text-sm leading-snug">Rapid water quenching creates a tough outer layer while keeping the core ductile.</p>
                 </div>
 
                 {/* Step 6 */}
-                <div className="bg-white p-5 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
-                  <div className="flex items-center gap-4 mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                      <span className="material-symbols-outlined text-2xl text-primary group-hover:text-white transition-colors">verified</span>
+                <div className="bg-white p-4 rounded-xl shadow-sm border border-primary/10 hover:border-primary hover:-translate-y-1 transition-all duration-300 group">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                      <span className="material-symbols-outlined text-xl text-primary group-hover:text-white transition-colors">verified</span>
                     </div>
-                    <h3 className="text-lg font-bold text-primary">6. Quality Inspection</h3>
+                    <h3 className="text-base font-bold text-primary">6. Quality Inspection</h3>
                   </div>
-                  <p className="text-on-surface-variant text-sm">Rigorous physical and chemical tests guarantee global safety standards.</p>
+                  <p className="text-on-surface-variant text-sm leading-snug">Rigorous physical and chemical tests guarantee global safety standards.</p>
                 </div>
               </div>
             </div>
@@ -249,28 +249,28 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
               <div className="group cursor-pointer">
-                <div className="h-96 mb-6 overflow-hidden relative rounded-2xl shadow-md">
+                <div className="h-64 md:h-72 mb-3.5 overflow-hidden relative rounded-2xl shadow-md">
                   <img alt="Skyline Tower" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUQuQb0bd3fAUyATHGUPW-A20NZVsRwzh64rqY7RScs2ayvwMYqUx5lSZsrAWKPAa6t8QYgC5aLuXabidIgouhYe_zpFBm4fRXvZ2uGFTk1HO3TWKdAEXrptdM1qevpxlLVHrdhrxyf3jzEXuj2MV_eBr-r63yyRtzNxXl8Xo9PLjtAOhKqH2-0m32nJQylmVqY4iIdHtky10jF104it5d7WyY_Jm2zbNVuyApqG1We_H_toDBVMKGH-DHJFiKHk8pDX5OSRp-UlUY" />
-                  <div className="absolute top-4 left-4 bg-secondary text-white px-3 py-1 font-label-caps text-label-caps rounded-md shadow-sm z-10">SKYSCRAPERS</div>
+                  <div className="absolute top-3.5 left-3.5 bg-secondary text-white px-2.5 py-0.5 font-label-caps text-[10px] rounded-md shadow-sm z-10 tracking-wider">SKYSCRAPERS</div>
                 </div>
-                <h4 className="font-headline-md text-headline-md mb-2 font-bold text-primary">Nexus Global Center</h4>
-                <p className="text-on-surface-variant">50,000 Tonnes of Fe 500D used for vertical integrity.</p>
+                <h4 className="text-lg md:text-xl mb-1 font-bold text-primary group-hover:text-secondary transition-colors duration-300">Nexus Global Center</h4>
+                <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed">50,000 Tonnes of Fe 500D used for vertical integrity.</p>
               </div>
               <div className="group cursor-pointer">
-                <div className="h-96 mb-6 overflow-hidden relative rounded-2xl shadow-md">
+                <div className="h-64 md:h-72 mb-3.5 overflow-hidden relative rounded-2xl shadow-md">
                   <img alt="Metro Project" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9s7yn3tUdnswhYzP4GRjZdcjjYs6ynhrz7ktKAn1gZMF9eWLm0_PcM85XnKuZUf4NrDrjptBeAR5MIfa4iA9odDt9Unl1UOIoKHlJ6pkqnOmUg3H0ZDdJqvOE4ZmDb9Fa1f1a1LPUXScKpXB7YAffKAfSGiWiIc6hhpkr5RvnhQSu8t7M8NPS_Ta51bcMfD-6Vqx2gDHefWDO6eouEsAm99Z6Kww2vTwyalUQHtcK2Nf8RwIsw38xTGwsiixWs1UBiiFtXrDniroT" />
-                  <div className="absolute top-4 left-4 bg-secondary text-white px-3 py-1 font-label-caps text-label-caps rounded-md shadow-sm z-10">INFRASTRUCTURE</div>
+                  <div className="absolute top-3.5 left-3.5 bg-secondary text-white px-2.5 py-0.5 font-label-caps text-[10px] rounded-md shadow-sm z-10 tracking-wider">INFRASTRUCTURE</div>
                 </div>
-                <h4 className="font-headline-md text-headline-md mb-2 font-bold text-primary">City Metro Phase III</h4>
-                <p className="text-on-surface-variant">Seismic-grade reinforcement for transit reliability.</p>
+                <h4 className="text-lg md:text-xl mb-1 font-bold text-primary group-hover:text-secondary transition-colors duration-300">City Metro Phase III</h4>
+                <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed">Seismic-grade reinforcement for transit reliability.</p>
               </div>
               <div className="group cursor-pointer">
-                <div className="h-96 mb-6 overflow-hidden relative rounded-2xl shadow-md">
+                <div className="h-64 md:h-72 mb-3.5 overflow-hidden relative rounded-2xl shadow-md">
                   <img alt="Cable Stayed Bridge" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDdD5XjUOsRUUZ9ALkHOnWMA5RRiIgSSIMin37LkV6PZSSy091tt0VSkR7kKQVqADnig6rRl4USBsZXBYhZSlUgs8p9istnZCGE_1nR-wWBiPFG0C1vWGfDeL-YMVDjurDXppS4-d-9m26rJUlRD1am_KGN8_kOiWp1e_rcTexEliapnUmMUJVu0GK9_gAEFKTaNmgEjwp9SjjpJTBel7dh8Y1K1xkrj3o-m5dxVdqIM31dviMQNmMlp-SCeNU4oAXadzoVKzVsU91" />
-                  <div className="absolute top-4 left-4 bg-secondary text-white px-3 py-1 font-label-caps text-label-caps rounded-md shadow-sm z-10">BRIDGES</div>
+                  <div className="absolute top-3.5 left-3.5 bg-secondary text-white px-2.5 py-0.5 font-label-caps text-[10px] rounded-md shadow-sm z-10 tracking-wider">BRIDGES</div>
                 </div>
-                <h4 className="font-headline-md text-headline-md mb-2 font-bold text-primary">Coastal Expressway Bridge</h4>
-                <p className="text-on-surface-variant">Corrosion-resistant steel for marine environments.</p>
+                <h4 className="text-lg md:text-xl mb-1 font-bold text-primary group-hover:text-secondary transition-colors duration-300">Coastal Expressway Bridge</h4>
+                <p className="text-on-surface-variant text-xs md:text-sm leading-relaxed">Corrosion-resistant steel for marine environments.</p>
               </div>
             </div>
           </div>

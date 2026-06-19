@@ -4,6 +4,7 @@ import Products from './pages/Products';
 import Infrastructure from './pages/Infrastructure';
 import Projects from './pages/Projects';
 import About from './pages/About';
+import Clients from './pages/Clients';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import RequestQuote from './pages/RequestQuote';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/infrastructure" element={<Infrastructure />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/request-quote" element={<RequestQuote />} />

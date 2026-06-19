@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-white border-t border-primary/20">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding px-margin-mobile md:px-section-padding max-w-container-max mx-auto">
-        <div className="md:col-span-1 text-center md:pr-8 lg:pr-12">
-          <img src="/Logo (7).png" alt="Kamachi TMT" className="h-14 md:h-16 w-auto mb-4 md:mb-6 bg-white rounded-lg p-2 mx-auto" />
-          <p className="text-white/80 font-body-md px-4 mb-4 md:mb-0">Leading the steel industry through innovative manufacturing and sustainable growth since 1980.</p>
+        <div className="md:col-span-1 text-center md:text-left md:pr-8 lg:pr-12">
+          <img src="/Logo (7).png" alt="Kamachi TMT" className="h-14 md:h-16 w-auto mb-4 md:mb-6 bg-white rounded-lg p-2 mx-auto md:mx-0" />
+          <p className="text-white/80 font-body-md mb-4 md:mb-0">Leading the steel industry through innovative manufacturing and sustainable growth since 1980.</p>
         </div>
         <div>
           <h4 className="text-xl font-medium text-white mb-6">Quick Links</h4>

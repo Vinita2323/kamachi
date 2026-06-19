@@ -90,23 +90,6 @@ const Projects = () => {
     <>
       <Header />
       <main className="pt-20">
-        
-        {/* Hero Section */}
-        <section className="relative h-[40vh] min-h-[350px] flex items-center justify-center overflow-hidden bg-primary/80 text-white">
-          <div className="absolute inset-0 w-full h-full">
-            <img src={skyscraperImg} alt="Kamachi Projects Hero" className="w-full h-full object-cover opacity-75" />
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/20 to-primary/85"></div>
-          </div>
-          <div className="relative z-10 text-center px-margin-mobile md:px-section-padding max-w-container-max mx-auto">
-            <span className="font-label-caps text-label-caps tracking-widest uppercase mb-2 block text-secondary">PROJECT PORTFOLIO</span>
-            <h1 className="font-headline-lg text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg leading-tight">
-              Building Landmarks <span className="text-secondary">of Tomorrow</span>
-            </h1>
-            <p className="font-body-lg text-base md:text-lg max-w-3xl mx-auto opacity-90 leading-relaxed">
-              Explore how Kamachi's premium TMT bars empower India's most ambitious infrastructural, commercial, and residential engineering marvels.
-            </p>
-          </div>
-        </section>
 
         {/* Portfolio Section */}
         <section className="py-10 bg-background text-primary">

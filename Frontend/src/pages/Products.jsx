@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ProductsHeroImage from '../assets/ProductsHero.png';
 import ExtraStrongImg from '../assets/extra_strong_tmt.png';
 import EarthquakeSafeImg from '../assets/earthquake_safe_tmt.png';
 import RustProofImg from '../assets/rust_proof_tmt.png';
@@ -16,13 +15,23 @@ const Products = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative h-[614px] flex items-center overflow-hidden bg-inverse-surface">
-          <div className="absolute inset-0 z-0 opacity-40">
-            <img alt="Kamachi Industrial Steel" className="w-full h-full object-cover" src={ProductsHeroImage} />
+        <section className="relative h-[614px] flex items-center overflow-hidden bg-black">
+          <div className="absolute inset-0 z-0">
+            <video 
+              src="/assets/heroProducts.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="w-full h-full object-cover opacity-80"
+            ></video>
           </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent z-0"></div>
           <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-section-padding w-full">
-            <div className="inline-block p-6 md:p-8">
-
+            <div className="max-w-3xl" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
+              <span className="inline-block bg-primary text-on-primary px-4 py-1 font-label-caps text-label-caps mb-6">PRODUCT CATALOGUE</span>
+              <h1 className="font-display-lg text-display-lg text-white mb-6 leading-none">Engineered for <span className="block text-red-600">Ultimate Strength</span></h1>
+              <p className="text-white/90 text-lg md:text-xl max-w-2xl mb-8">Discover our range of premium TMT bars and steel solutions manufactured to the highest international safety and durability standards.</p>
             </div>
           </div>
         </section>

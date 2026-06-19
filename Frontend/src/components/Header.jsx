@@ -26,11 +26,12 @@ const Header = () => {
         <Link to="/" className="flex items-center -ml-2 md:-ml-6">
           <img src="/Logo (7).png" alt="Kamachi TMT" className="h-14 md:h-16 w-auto" />
         </Link>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           <Link to="/" className={`text-base ${location.pathname === '/' ? 'text-primary border-b-2 border-primary pb-1 font-bold' : 'text-on-surface-variant font-medium hover:text-primary transition-colors'}`}>Home</Link>
           <Link to="/products" className={`text-base ${location.pathname === '/products' ? 'text-primary border-b-2 border-primary pb-1 font-bold' : 'text-on-surface-variant font-medium hover:text-primary transition-colors'}`}>Products</Link>
           <Link to="/infrastructure" className={`text-base ${location.pathname === '/infrastructure' ? 'text-primary border-b-2 border-primary pb-1 font-bold' : 'text-on-surface-variant font-medium hover:text-primary transition-colors'}`}>Infrastructure</Link>
           <Link to="/projects" className={`text-base ${location.pathname === '/projects' ? 'text-primary border-b-2 border-primary pb-1 font-bold' : 'text-on-surface-variant font-medium hover:text-primary transition-colors'}`}>Projects</Link>
+          <Link to="/clients" className={`text-base ${location.pathname === '/clients' ? 'text-primary border-b-2 border-primary pb-1 font-bold' : 'text-on-surface-variant font-medium hover:text-primary transition-colors'}`}>Our Clients</Link>
           <Link to="/about" className={`text-base ${location.pathname === '/about' ? 'text-primary border-b-2 border-primary pb-1 font-bold' : 'text-on-surface-variant font-medium hover:text-primary transition-colors'}`}>About</Link>
         </div>
         <div className="flex items-center gap-4">

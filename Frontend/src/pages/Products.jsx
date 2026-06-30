@@ -8,6 +8,7 @@ import RustProofImg from '../assets/rust_proof_tmt.png';
 import FireResistantImg from '../assets/fire_resistant_tmt.png';
 import StrongGripImg from '../assets/strong_grip_tmt.png';
 import CertifiedQualityImg from '../assets/certified_quality_tmt.png';
+import HeroProductsImg from '../assets/heroproducts.png';
 
 const Products = () => {
   return (
@@ -15,235 +16,363 @@ const Products = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative h-[614px] flex items-center overflow-hidden bg-black">
-          <div className="absolute inset-0 z-0">
-            <video 
-              src="/assets/heroProducts.mp4" 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className="w-full h-full object-cover opacity-80"
-            ></video>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent z-0"></div>
-          <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-section-padding w-full">
-            <div className="max-w-3xl" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>
-              <span className="inline-block bg-primary text-on-primary px-4 py-1 font-label-caps text-label-caps mb-6">PRODUCT CATALOGUE</span>
-              <h1 className="font-display-lg text-display-lg text-white mb-6 leading-none">Engineered for <span className="block text-red-600">Ultimate Strength</span></h1>
-              <p className="text-white/90 text-lg md:text-xl max-w-2xl mb-8">Discover our range of premium TMT bars and steel solutions manufactured to the highest international safety and durability standards.</p>
+        <section className="relative min-h-[614px] flex items-center overflow-hidden bg-[#050b14] p-4 md:p-6 lg:p-8">
+          <div className="relative w-full h-full min-h-[550px] flex flex-col justify-center border border-white/10 rounded-2xl overflow-hidden p-8 md:p-16">
+            {/* Background Image/Video with Overlay */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src={HeroProductsImg}
+                alt="Kamachi TMT Products"
+                className="w-full h-full object-cover opacity-20"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#050b14] via-[#050b14]/80 to-transparent"></div>
+              {/* Bottom Blue Glow */}
+              <div className="absolute bottom-0 left-1/4 right-1/4 h-[2px] bg-blue-500/50 shadow-[0_0_50px_20px_rgba(59,130,246,0.4)]"></div>
+            </div>
+
+            <div className="relative z-10 max-w-4xl">
+              <span className="inline-block text-[#3b82f6] font-bold uppercase tracking-wider text-sm mb-4">PRODUCT CATALOGUE</span>
+              <h1 className="font-display-lg text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1]">
+                Engineered for <br />
+                <span className="text-[#3b82f6]">Ultimate Strength</span>
+              </h1>
+              <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-12">
+                Discover our range of premium TMT bars and steel solutions manufactured to the highest international safety and durability standards.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-[#3b82f6] text-3xl opacity-90">shield</span>
+                  <span className="text-gray-200 text-sm font-medium">High Strength</span>
+                </div>
+                
+                <div className="hidden sm:block w-px h-10 bg-white/10"></div>
+                
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-[#3b82f6] text-3xl opacity-90">domain</span>
+                  <span className="text-gray-200 text-sm font-medium leading-tight">Earthquake<br/>Resistant</span>
+                </div>
+                
+                <div className="hidden sm:block w-px h-10 bg-white/10"></div>
+                
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-[#3b82f6] text-3xl opacity-90">water_drop</span>
+                  <span className="text-gray-200 text-sm font-medium leading-tight">Corrosion<br/>Resistant</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Quality of Product Section */}
-        <section className="py-section-padding bg-white">
+        <section className="pt-24 pb-8 bg-[#050b14]">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
             <div className="text-center mb-16">
-            <span className="text-lg font-bold text-secondary mb-2 block tracking-widest uppercase">Why Choose Kamachi</span>
-            <h2 className="font-headline-lg text-4xl md:text-5xl text-primary font-bold">Uncompromising Quality</h2>
-            <p className="mt-4 max-w-2xl mx-auto text-on-surface-variant font-body-md">Our TMT bars are manufactured using advanced European technology to ensure the highest standards of safety, strength, and durability for your construction projects.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-white rounded-lg shadow-lg border border-outline/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col">
-              <div className="w-full h-40 overflow-hidden">
-                <img src={ExtraStrongImg} alt="Extra Strong" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="h-[2px] w-8 bg-[#3b82f6]/70"></div>
+                <span className="text-sm font-bold text-[#3b82f6] tracking-[0.15em] uppercase">Why Choose Kamachi</span>
+                <div className="h-[2px] w-8 bg-[#3b82f6]/70"></div>
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-xl font-bold text-primary mb-2">Extra Strong</h3>
-                <p className="text-sm text-on-surface-variant leading-snug">Engineered for higher yield strength and load-bearing capacity, significantly reducing the quantity of steel required without compromising structural integrity.</p>
-              </div>
+              <h2 className="font-display-md text-3xl md:text-5xl text-white font-bold mb-6">Built to Perform. Built to Last.</h2>
+              <p className="max-w-3xl mx-auto text-gray-400 text-base md:text-lg">
+                Our TMT bars are manufactured using advanced European technology to ensure the highest standards of safety, strength, and durability for your construction projects.
+              </p>
             </div>
 
-            {/* Feature 2 */}
-            <div className="bg-white rounded-lg shadow-lg border border-outline/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col">
-              <div className="w-full h-40 overflow-hidden">
-                <img src={EarthquakeSafeImg} alt="Earthquake Safe" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Feature 1 */}
+              <div className="bg-[#0a101d] rounded-xl border border-white/5 overflow-hidden group hover:border-white/10 transition-colors flex flex-col">
+                <div className="relative h-44 md:h-48 overflow-hidden shrink-0">
+                  <img src={ExtraStrongImg} alt="Extra Strong" className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a101d] via-[#0a101d]/20 to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 md:left-5">
+                    <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center backdrop-blur-md">
+                      <span className="material-symbols-outlined text-[#3b82f6] text-[20px]">shield</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 md:p-5 pt-3 flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-white mb-1.5">Extra Strong</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-snug">
+                    Engineered for higher yield strength and load-bearing capacity, significantly reducing the quantity of steel required without compromising structural integrity.
+                  </p>
+                </div>
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-xl font-bold text-primary mb-2">Earthquake Safe</h3>
-                <p className="text-sm text-on-surface-variant leading-snug">High ductility and elongation properties make our TMT bars capable of absorbing immense energy, making them ideal for earthquake-prone zones.</p>
-              </div>
-            </div>
 
-            {/* Feature 3 */}
-            <div className="bg-white rounded-lg shadow-lg border border-outline/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col">
-              <div className="w-full h-40 overflow-hidden">
-                <img src={RustProofImg} alt="Rust Proof" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              {/* Feature 2 */}
+              <div className="bg-[#0a101d] rounded-xl border border-white/5 overflow-hidden group hover:border-white/10 transition-colors flex flex-col">
+                <div className="relative h-44 md:h-48 overflow-hidden shrink-0">
+                  <img src={EarthquakeSafeImg} alt="Earthquake Safe" className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a101d] via-[#0a101d]/20 to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 md:left-5">
+                    <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center backdrop-blur-md">
+                      <span className="material-symbols-outlined text-[#3b82f6] text-[20px]">domain</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 md:p-5 pt-3 flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-white mb-1.5">Earthquake Safe</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-snug">
+                    High ductility and elongation properties make our TMT bars capable of absorbing immense energy, making them ideal for earthquake-prone zones.
+                  </p>
+                </div>
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-xl font-bold text-primary mb-2">Rust Proof</h3>
-                <p className="text-sm text-on-surface-variant leading-snug">Advanced thermo-mechanical treatment ensures uniform microstructure and minimal residual stress, offering exceptional resistance against rust and corrosion.</p>
-              </div>
-            </div>
 
-            {/* Feature 4 */}
-            <div className="bg-white rounded-lg shadow-lg border border-outline/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col">
-              <div className="w-full h-40 overflow-hidden">
-                <img src={FireResistantImg} alt="Fire Resistant" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              {/* Feature 3 */}
+              <div className="bg-[#0a101d] rounded-xl border border-white/5 overflow-hidden group hover:border-white/10 transition-colors flex flex-col">
+                <div className="relative h-44 md:h-48 overflow-hidden shrink-0">
+                  <img src={RustProofImg} alt="Rust Proof" className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a101d] via-[#0a101d]/20 to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 md:left-5">
+                    <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center backdrop-blur-md">
+                      <span className="material-symbols-outlined text-[#3b82f6] text-[20px]">water_drop</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 md:p-5 pt-3 flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-white mb-1.5">Rust Proof</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-snug">
+                    Advanced thermo-mechanical treatment ensures uniform microstructure and minimal residual stress, offering exceptional resistance against rust and corrosion.
+                  </p>
+                </div>
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-xl font-bold text-primary mb-2">Fire Resistant</h3>
-                <p className="text-sm text-on-surface-variant leading-snug">Exceptional fire resistance capabilities allow our steel to maintain its structural properties even at elevated temperatures during fire hazards.</p>
-              </div>
-            </div>
 
-            {/* Feature 5 */}
-            <div className="bg-white rounded-lg shadow-lg border border-outline/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col">
-              <div className="w-full h-40 overflow-hidden">
-                <img src={StrongGripImg} alt="Strong Grip" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              {/* Feature 4 */}
+              <div className="bg-[#0a101d] rounded-xl border border-white/5 overflow-hidden group hover:border-white/10 transition-colors flex flex-col">
+                <div className="relative h-44 md:h-48 overflow-hidden shrink-0">
+                  <img src={FireResistantImg} alt="Fire Resistant" className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a101d] via-[#0a101d]/20 to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 md:left-5">
+                    <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center backdrop-blur-md">
+                      <span className="material-symbols-outlined text-[#3b82f6] text-[20px]">local_fire_department</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 md:p-5 pt-3 flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-white mb-1.5">Fire Resistant</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-snug">
+                    Exceptional fire resistance capabilities allow our steel to maintain its structural properties even at elevated temperatures during fire hazards.
+                  </p>
+                </div>
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-xl font-bold text-primary mb-2">Strong Grip</h3>
-                <p className="text-sm text-on-surface-variant leading-snug">Precision-engineered rib patterns maximize the gripping strength with concrete, ensuring a flawless monolithic structure that lasts generations.</p>
-              </div>
-            </div>
 
-            {/* Feature 6 */}
-            <div className="bg-white rounded-lg shadow-lg border border-outline/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col">
-              <div className="w-full h-40 overflow-hidden">
-                <img src={CertifiedQualityImg} alt="Certified Quality" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              {/* Feature 5 */}
+              <div className="bg-[#0a101d] rounded-xl border border-white/5 overflow-hidden group hover:border-white/10 transition-colors flex flex-col">
+                <div className="relative h-44 md:h-48 overflow-hidden shrink-0">
+                  <img src={StrongGripImg} alt="Strong Grip" className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a101d] via-[#0a101d]/20 to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 md:left-5">
+                    <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center backdrop-blur-md">
+                      <span className="material-symbols-outlined text-[#3b82f6] text-[20px]">architecture</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 md:p-5 pt-3 flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-white mb-1.5">Strong Grip</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-snug">
+                    Precision-engineered rib patterns maximize the gripping strength with concrete, ensuring a flawless monolithic structure that lasts generations.
+                  </p>
+                </div>
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-xl font-bold text-primary mb-2">Certified Quality</h3>
-                <p className="text-sm text-on-surface-variant leading-snug">Manufactured in state-of-the-art facilities and rigorously tested to surpass domestic IS 1786 and international quality certifications.</p>
+
+              {/* Feature 6 */}
+              <div className="bg-[#0a101d] rounded-xl border border-white/5 overflow-hidden group hover:border-white/10 transition-colors flex flex-col">
+                <div className="relative h-44 md:h-48 overflow-hidden shrink-0">
+                  <img src={CertifiedQualityImg} alt="Certified Quality" className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a101d] via-[#0a101d]/20 to-transparent"></div>
+                  <div className="absolute bottom-3 left-4 md:left-5">
+                    <div className="w-10 h-10 rounded-lg bg-[#3b82f6]/10 border border-[#3b82f6]/30 flex items-center justify-center backdrop-blur-md">
+                      <span className="material-symbols-outlined text-[#3b82f6] text-[20px]">verified</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4 md:p-5 pt-3 flex-1 flex flex-col">
+                  <h3 className="text-lg font-bold text-white mb-1.5">Certified Quality</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-snug">
+                    Manufactured in state-of-the-art facilities and rigorously tested to surpass domestic IS 1786 and international quality certifications.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </section>
 
-        {/* Technical Specifications Table */}
-        <section className="py-8 bg-surface-container-low">
+        {/* Technical Specifications & Application Guide */}
+        <section className="pt-8 pb-24 bg-[#050b14]">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
-            <div className="mb-6 text-center">
-              <h2 className="font-headline-md text-3xl font-bold text-primary mb-2">Technical Specifications</h2>
-              <p className="font-body-md text-sm text-on-surface-variant max-w-2xl mx-auto">Our products are tested in NABL accredited labs to meet and exceed global engineering standards.</p>
+            
+            {/* Technical Specifications Header */}
+            <div className="mb-12 text-center">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="h-[2px] w-8 bg-[#3b82f6]/70"></div>
+                <span className="text-sm font-bold text-[#3b82f6] tracking-[0.15em] uppercase">Technical Specifications</span>
+                <div className="h-[2px] w-8 bg-[#3b82f6]/70"></div>
+              </div>
+              <h2 className="font-display-md text-3xl md:text-5xl text-white font-bold mb-6">Tested. Trusted. Certified.</h2>
+              <p className="max-w-3xl mx-auto text-gray-400 text-base md:text-lg">
+                Our products are tested in NABL accredited labs to meet and exceed global engineering standards.
+              </p>
             </div>
-            <div className="overflow-x-auto border border-outline-variant bg-white rounded-lg">
+
+            {/* Technical Specifications Table */}
+            <div className="overflow-x-auto border border-white/10 bg-[#0a101d] rounded-2xl mb-12">
               <table className="w-full text-left border-collapse text-sm">
                 <thead>
-                  <tr className="bg-primary text-white">
-                    <th className="px-4 py-2 font-label-caps text-xs">PROPERTIES</th>
-                    <th className="px-4 py-2 font-label-caps text-xs">IS 1786 SPEC</th>
-                    <th className="px-4 py-2 font-label-caps text-xs">KAMACHI FE 500D</th>
-                    <th className="px-4 py-2 font-label-caps text-xs">KAMACHI FE 550</th>
-                    <th className="px-4 py-2 font-label-caps text-xs">KAMACHI FE 600</th>
+                  <tr className="border-b border-white/10 text-gray-400 bg-white/5">
+                    <th className="px-6 py-5 font-bold text-xs uppercase tracking-wider">PROPERTIES</th>
+                    <th className="px-6 py-5 font-bold text-xs uppercase tracking-wider text-center">IS 1786 SPEC</th>
+                    <th className="px-6 py-5 font-bold text-xs uppercase tracking-wider text-center">KAMACHI FE 500D</th>
+                    <th className="px-6 py-5 font-bold text-xs uppercase tracking-wider text-center">KAMACHI FE 550</th>
+                    <th className="px-6 py-5 font-bold text-xs uppercase tracking-wider text-center">KAMACHI FE 600</th>
                   </tr>
                 </thead>
-                <tbody className="font-data-table">
-                  <tr className="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
-                    <td className="px-4 py-2 font-bold text-primary">Yield Stress (N/mm²)</td>
-                    <td className="px-4 py-2 text-on-surface-variant">Min 500</td>
-                    <td className="px-4 py-2 font-bold">525 - 540</td>
-                    <td className="px-4 py-2">Min 550</td>
-                    <td className="px-4 py-2">Min 600</td>
+                <tbody className="text-gray-300 font-data-table">
+                  <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                    <td className="px-6 py-5 font-bold text-[#3b82f6]">Yield Stress (N/mm²)</td>
+                    <td className="px-6 py-5 text-center">Min 500</td>
+                    <td className="px-6 py-5 text-center">500</td>
+                    <td className="px-6 py-5 text-center">550</td>
+                    <td className="px-6 py-5 text-center">600</td>
                   </tr>
-                  <tr className="bg-surface-container-lowest border-b border-outline-variant hover:bg-surface-container-low transition-colors">
-                    <td className="px-4 py-2 font-bold text-primary">Elongation (%)</td>
-                    <td className="px-4 py-2 text-on-surface-variant">Min 16.0</td>
-                    <td className="px-4 py-2 font-bold">18 - 22</td>
-                    <td className="px-4 py-2">Min 10.0</td>
-                    <td className="px-4 py-2">Min 10.0</td>
+                  <tr className="border-b border-white/5 hover:bg-white/5 transition-colors bg-[#0a101d]/50">
+                    <td className="px-6 py-5 font-bold text-[#3b82f6]">Elongation (%)</td>
+                    <td className="px-6 py-5 text-center">Min 16.0</td>
+                    <td className="px-6 py-5 text-center">16.0</td>
+                    <td className="px-6 py-5 text-center">16.0</td>
+                    <td className="px-6 py-5 text-center">16.0</td>
                   </tr>
-                  <tr className="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
-                    <td className="px-4 py-2 font-bold text-primary">Carbon (%)</td>
-                    <td className="px-4 py-2 text-on-surface-variant">Max 0.25</td>
-                    <td className="px-4 py-2 font-bold">0.18 - 0.22</td>
-                    <td className="px-4 py-2">Max 0.25</td>
-                    <td className="px-4 py-2">Max 0.25</td>
+                  <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                    <td className="px-6 py-5 font-bold text-[#3b82f6]">Carbon (%)</td>
+                    <td className="px-6 py-5 text-center">Max 0.25</td>
+                    <td className="px-6 py-5 text-center">0.22</td>
+                    <td className="px-6 py-5 text-center">0.23</td>
+                    <td className="px-6 py-5 text-center">0.24</td>
                   </tr>
-                  <tr className="bg-surface-container-lowest border-b border-outline-variant hover:bg-surface-container-low transition-colors">
-                    <td className="px-4 py-2 font-bold text-primary">Sulphur &amp; Phosphorus (%)</td>
-                    <td className="px-4 py-2 text-on-surface-variant">Max 0.040</td>
-                    <td className="px-4 py-2 font-bold">Max 0.035</td>
-                    <td className="px-4 py-2">Max 0.040</td>
-                    <td className="px-4 py-2">Max 0.040</td>
+                  <tr className="hover:bg-white/5 transition-colors bg-[#0a101d]/50">
+                    <td className="px-6 py-5 font-bold text-[#3b82f6]">Sulphur & Phosphorus (%)</td>
+                    <td className="px-6 py-5 text-center">Max 0.040</td>
+                    <td className="px-6 py-5 text-center">0.035</td>
+                    <td className="px-6 py-5 text-center">0.035</td>
+                    <td className="px-6 py-5 text-center">0.035</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            {/* Application Guide & Downloads */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              
+              {/* Recommended Applications Card */}
+              <div className="bg-[#0a101d] border border-white/10 p-8 md:p-10 rounded-2xl relative overflow-hidden group">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="material-symbols-outlined text-[#3b82f6] text-2xl">domain</span>
+                  <h3 className="font-bold text-[#3b82f6] uppercase tracking-wider text-sm">RECOMMENDED APPLICATIONS</h3>
+                </div>
+                
+                <p className="text-gray-300 text-base md:text-lg mb-8 pr-12 relative z-10 leading-relaxed">
+                  Not sure which grade suits your specific architectural requirement?
+                </p>
+                
+                <p className="text-gray-400 text-sm mb-4 relative z-10">Recommended:</p>
+                
+                <ul className="space-y-5 text-gray-300 text-sm md:text-base relative z-10 leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="text-[#3b82f6] mt-0.5">•</span>
+                    <span><strong className="text-white font-bold">Fe 500D or Fe 550</strong> — Ideal for high-rise buildings, urban complexes, and single-family homes in seismic areas.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#3b82f6] mt-0.5">•</span>
+                    <span><strong className="text-white font-bold">Fe 600 or HCRM</strong> — Optimized for dams, highways, bridges, and industrial foundations requiring maximum strength-to-volume.</span>
+                  </li>
+                </ul>
+
+                {/* Building graphic bottom right */}
+                <span className="material-symbols-outlined absolute -bottom-6 -right-6 text-[200px] text-white/[0.03] rotate-6 pointer-events-none group-hover:scale-105 transition-transform duration-700">location_city</span>
+              </div>
+
+              {/* Resource Center Card */}
+              <div className="bg-[#0a101d] border border-white/10 p-8 md:p-10 rounded-2xl relative overflow-hidden group">
+                <div className="flex items-center gap-3 mb-6 relative z-10">
+                  <span className="material-symbols-outlined text-[#3b82f6] text-2xl">local_library</span>
+                  <h3 className="font-bold text-[#3b82f6] uppercase tracking-wider text-sm">RESOURCE CENTER</h3>
+                </div>
+                
+                <div className="space-y-4 relative z-10">
+                  <a className="group/btn flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-[#3b82f6]/10 hover:border-[#3b82f6]/30 transition-all cursor-pointer" href="/downloads/technical-product-brochure.pdf" download="Technical_Product_Brochure.pdf">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20 shrink-0">
+                        <span className="text-[11px] font-bold text-red-500 uppercase tracking-widest">PDF</span>
+                      </div>
+                      <div>
+                        <p className="font-bold text-white text-sm md:text-base mb-0.5">Technical Product Brochure</p>
+                        <p className="text-xs text-gray-500 tracking-wide">PDF, 4.2 MB</p>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-[#3b82f6] group-hover/btn:-translate-y-1 transition-transform">download</span>
+                  </a>
+
+                  <a className="group/btn flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-[#3b82f6]/10 hover:border-[#3b82f6]/30 transition-all cursor-pointer" href="/downloads/quality-compliance-certificates.pdf" download="Quality_Compliance_Certificates.pdf">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20 shrink-0">
+                        <span className="text-[11px] font-bold text-red-500 uppercase tracking-widest">PDF</span>
+                      </div>
+                      <div>
+                        <p className="font-bold text-white text-sm md:text-base mb-0.5">Quality Compliance Certificates</p>
+                        <p className="text-xs text-gray-500 tracking-wide">PDF, 1.8 MB</p>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-[#3b82f6] group-hover/btn:-translate-y-1 transition-transform">download</span>
+                  </a>
+
+                  <a className="group/btn flex items-center justify-between p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-[#3b82f6]/10 hover:border-[#3b82f6]/30 transition-all cursor-pointer" href="/downloads/sustainability-report-2024.pdf" download="Sustainability_Report_2024.pdf">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center border border-red-500/20 shrink-0">
+                        <span className="text-[11px] font-bold text-red-500 uppercase tracking-widest">PDF</span>
+                      </div>
+                      <div>
+                        <p className="font-bold text-white text-sm md:text-base mb-0.5">Sustainability Report 2024</p>
+                        <p className="text-xs text-gray-500 tracking-wide">PDF, 5.5 MB</p>
+                      </div>
+                    </div>
+                    <span className="material-symbols-outlined text-[#3b82f6] group-hover/btn:-translate-y-1 transition-transform">download</span>
+                  </a>
+                </div>
+
+                <span className="material-symbols-outlined absolute -bottom-10 -right-6 text-[220px] text-white/[0.02] -rotate-12 pointer-events-none group-hover:scale-105 transition-transform duration-700">menu_book</span>
+              </div>
+
+            </div>
           </div>
         </section>
 
-        {/* Application Guide & Downloads */}
-        <section className="py-section-padding bg-blue-50">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-section-padding">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-            <div className="bg-white border border-outline-variant p-gutter industrial-shadow rounded-2xl">
-              <h3 className="font-headline-md text-headline-md text-primary mb-6 border-b border-outline-variant pb-4">Application Guide</h3>
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-error/10 rounded flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined text-error">home</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-primary mb-1">Residential &amp; Commercial</h4>
-                    <p className="text-on-surface-variant font-body-md">Recommended: Fe 500D or Fe 550. Ideal for high-rise buildings, urban complexes, and single-family homes in seismic areas.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-error/10 rounded flex items-center justify-center shrink-0">
-                    <span className="material-symbols-outlined text-error">foundation</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-primary mb-1">Heavy Infrastructure</h4>
-                    <p className="text-on-surface-variant font-body-md">Recommended: Fe 600 or HCRM. Optimized for dams, highways, bridges, and industrial foundations requiring maximum strength-to-volume.</p>
-                  </div>
-                </div>
-              </div>
+        {/* Need Help / Comparison Tool Section */}
+        <section className="pt-10 pb-16 bg-[#050b14] relative overflow-hidden border-t border-white/5">
+          {/* Subtle radial glow background to mimic the waves in the design */}
+          <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#3b82f6]/20 via-[#050b14] to-[#050b14]"></div>
+          
+          <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-section-padding text-center">
+            
+            <div className="mb-3 inline-flex items-center justify-center text-[#3b82f6]">
+              <span className="material-symbols-outlined text-3xl">architecture</span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl text-white font-bold mb-2">Need help choosing the right grade?</h2>
+            
+            <p className="text-gray-400 text-sm md:text-base mb-6 max-w-2xl mx-auto">
+              Use our interactive grade selector or talk to our steel expert.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+              <Link to="/grade-selector" className="bg-[#3b82f6] text-white px-8 py-3.5 rounded-lg font-bold text-sm hover:bg-[#2563eb] hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2">
+                Launch Grade Selector
+                <span className="material-symbols-outlined text-sm">arrow_forward</span>
+              </Link>
+              <Link to="/contact" className="border border-white/20 text-white px-8 py-3.5 rounded-lg font-bold text-sm hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2">
+                Talk to an Engineer
+                <span className="material-symbols-outlined text-sm">headset_mic</span>
+              </Link>
             </div>
             
-            <div className="bg-surface-container-highest border border-outline-variant p-gutter industrial-shadow rounded-2xl">
-              <h3 className="font-headline-md text-headline-md text-primary mb-6 border-b border-outline-variant pb-4">Resource Center</h3>
-              <div className="space-y-4">
-                <a className="group flex items-center justify-between p-4 bg-white border border-outline-variant rounded-lg hover:border-primary transition-all" href="/downloads/technical-product-brochure.pdf" download="Technical_Product_Brochure.pdf">
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-secondary">picture_as_pdf</span>
-                    <div>
-                      <p className="font-bold">Technical Product Brochure</p>
-                      <p className="text-[10px] text-on-surface-variant">PDF, 4.2 MB</p>
-                    </div>
-                  </div>
-                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">download</span>
-                </a>
-                <a className="group flex items-center justify-between p-4 bg-white border border-outline-variant rounded-lg hover:border-primary transition-all" href="/downloads/quality-compliance-certificates.pdf" download="Quality_Compliance_Certificates.pdf">
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-secondary">picture_as_pdf</span>
-                    <div>
-                      <p className="font-bold">Quality Compliance Certificates</p>
-                      <p className="text-[10px] text-on-surface-variant">PDF, 1.8 MB</p>
-                    </div>
-                  </div>
-                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">download</span>
-                </a>
-                <a className="group flex items-center justify-between p-4 bg-white border border-outline-variant rounded-lg hover:border-primary transition-all" href="/downloads/sustainability-report-2024.pdf" download="Sustainability_Report_2024.pdf">
-                  <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-secondary">picture_as_pdf</span>
-                    <div>
-                      <p className="font-bold">Sustainability Report 2024</p>
-                      <p className="text-[10px] text-on-surface-variant">PDF, 5.5 MB</p>
-                    </div>
-                  </div>
-                  <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">download</span>
-                </a>
-              </div>
-            </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comparison Tool Placeholder Interaction */}
-        <section className="py-section-padding bg-white">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-section-padding text-center">
-            <h2 className="font-headline-lg text-headline-lg text-primary mb-4">Precision Engineering Tool</h2>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-8 max-w-2xl mx-auto">Not sure which grade suits your specific architectural requirement? Use our interactive grade selector.</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/grade-selector" className="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold font-label-caps text-label-caps hover:scale-105 transition-transform inline-block">Launch Grade Selector</Link>
-              <Link to="/contact" className="border border-outline text-primary px-8 py-4 rounded-lg font-bold font-label-caps text-label-caps hover:bg-error hover:text-white transition-colors inline-block">Talk to an Engineer</Link>
-            </div>
           </div>
         </section>
       </main>

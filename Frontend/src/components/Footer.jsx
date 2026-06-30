@@ -1,46 +1,126 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <footer className="bg-primary text-white border-t border-primary/20">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding px-margin-mobile md:px-section-padding max-w-container-max mx-auto">
-        <div className="md:col-span-1 text-center md:text-left md:pr-8 lg:pr-12">
-          <img src="/Logo (7).png" alt="Kamachi TMT" className="h-14 md:h-16 w-auto mb-4 md:mb-6 bg-white rounded-lg p-2 mx-auto md:mx-0" />
-          <p className="text-white/80 font-body-md mb-4 md:mb-0">Leading the steel industry through innovative manufacturing and sustainable growth since 1980.</p>
-        </div>
-        <div>
-          <h4 className="text-xl font-medium text-white mb-6">Quick Links</h4>
-          <ul className="space-y-4">
-            <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Sustainability Report</a></li>
-            <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Global Locations</a></li>
-            <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Sitemap</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-medium text-white mb-6">Legal</h4>
-          <ul className="space-y-4">
-            <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Privacy Policy</a></li>
-            <li><a className="text-white/80 hover:text-white hover:translate-x-1 transition-all inline-block" href="#">Terms of Service</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-xl font-medium text-white mb-6">Contact</h4>
-          <p className="text-white/80 mb-4">Kamachi Towers, Industrial Area,<br />Chennai, TN - 600001</p>
-          <div className="flex gap-4">
-            <a className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary text-white transition-all" href="#">
-              <span className="material-symbols-outlined text-sm">mail</span>
-            </a>
-            <a className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-primary text-white transition-all" href="#">
-              <span className="material-symbols-outlined text-sm">call</span>
-            </a>
+    <footer className="bg-[#0f172a] text-white relative overflow-hidden">
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-8 md:gap-12 py-16 px-6 md:px-12 max-w-[1400px] mx-auto relative z-10">
+        
+        {/* Logo & Description */}
+        <div className="flex flex-col pr-0 lg:pr-8 md:border-r border-white/5">
+          <Link to="/" className="inline-block mb-6">
+            <img src="/Logo (7).png" alt="Kamachi TMT" className="h-12 w-auto" />
+          </Link>
+          <p className="text-white/60 text-xs mb-8 leading-relaxed max-w-[280px]">
+            Kamachi TMT Bars are engineered for unmatched strength and crafted for a stronger tomorrow.
+          </p>
+          <div className="flex gap-3">
+            {['facebook', 'linkedin', 'youtube', 'instagram'].map((social) => (
+              <a key={social} className="w-8 h-8 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-[#2563EB] text-white/80 hover:text-white transition-colors" href="#">
+                {/* SVG placeholders for social icons if material symbols don't match exactly */}
+                <span className="material-symbols-outlined text-[14px]">
+                  {social === 'facebook' ? 'public' : social === 'linkedin' ? 'work' : social === 'youtube' ? 'play_arrow' : 'photo_camera'}
+                </span>
+              </a>
+            ))}
           </div>
         </div>
+
+        {/* Products */}
+        <div className="pl-0 lg:pl-4">
+          <h4 className="text-[15px] font-bold text-white mb-6">Products</h4>
+          <ul className="space-y-3.5">
+            {['Fe 500D', 'Fe 550', 'Fe 600', 'CRS', 'TMT Bars'].map((item) => (
+              <li key={item}>
+                <Link to="/products" className="text-white/60 hover:text-white transition-colors text-xs">
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Company */}
+        <div>
+          <h4 className="text-[15px] font-bold text-white mb-6">Company</h4>
+          <ul className="space-y-3.5">
+            {['About Us', 'Infrastructure', 'Projects', 'Our Clients', 'Careers'].map((item) => (
+              <li key={item}>
+                <Link to={`/${item.toLowerCase().replace(' ', '-')}`} className="text-white/60 hover:text-white transition-colors text-xs">
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Resources */}
+        <div>
+          <h4 className="text-[15px] font-bold text-white mb-6">Resources</h4>
+          <ul className="space-y-3.5">
+            {['Brochure', 'Quality Policy', 'Sustainability', 'Blog', 'Contact Us'].map((item) => (
+              <li key={item}>
+                <a className="text-white/60 hover:text-white transition-colors text-xs" href="#">
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact Us */}
+        <div>
+          <h4 className="text-[15px] font-bold text-white mb-6">Contact Us</h4>
+          <ul className="space-y-5">
+            <li className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-white/60 text-[16px] mt-0.5">location_on</span>
+              <p className="text-white/60 text-xs leading-relaxed">
+                Kamachi Industries Limited,<br/>Durgapur, West Bengal, India
+              </p>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-white/60 text-[16px]">call</span>
+              <p className="text-white/60 text-xs">1800 345 0000</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="material-symbols-outlined text-white/60 text-[16px]">mail</span>
+              <p className="text-white/60 text-xs">info@kamachitmt.com</p>
+            </li>
+          </ul>
+        </div>
+
       </div>
-      <div className="border-t border-white/20 py-8 px-margin-mobile text-center">
-        <p className="text-white/60 font-label-caps text-[10px] tracking-widest uppercase">© 2024 Kamachi Industries. All rights reserved. Precise Engineering, Sustainable Strength.</p>
+      
+      {/* Bottom Bar */}
+      <div className="border-t border-white/5 py-5 px-6 relative z-10">
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 relative">
+          <p className="text-white/60 text-[11px]">© 2024 Kamachi Industries Limited. All Rights Reserved.</p>
+          <div className="flex gap-4 items-center">
+            <div className="flex gap-4">
+              <a href="#" className="text-white/60 hover:text-white text-[11px] transition-colors">Privacy Policy</a>
+              <span className="text-white/20 text-[11px]">|</span>
+              <a href="#" className="text-white/60 hover:text-white text-[11px] transition-colors">Terms & Conditions</a>
+            </div>
+            
+            {/* Scroll to top button */}
+            <button 
+              onClick={scrollToTop}
+              className="w-8 h-8 rounded bg-[#1e293b] border border-white/5 flex items-center justify-center hover:bg-[#2563EB] hover:border-[#2563EB] transition-colors md:absolute md:right-0 md:-top-12"
+              aria-label="Scroll to top"
+            >
+              <span className="material-symbols-outlined text-white/80 text-[16px]">arrow_upward</span>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
